@@ -1,0 +1,301 @@
+**Bestand: `opmaak.css`**
+
+```css
+/* =========================================
+   ALGEMENE INSTELLINGEN
+   ========================================= */
+
+/* Deze selector (*) geldt voor alle elementen. */
+* {
+    box-sizing: border-box;
+}
+
+/* De body bepaalt de standaardstijl van de hele pagina. */
+body {
+    margin: 0;
+    background-color: #10120F;
+    color: #F3F4EF; /* Dit is de standaard tekstkleur. */
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* Alle links krijgen een nette standaardopmaak. */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================================
+   BOVENBALK EN NAVIGATIEMENU
+   ========================================= */
+
+/* De bovenbalk bevat het logo en het navigatiemenu. */
+.bovenbalk {
+    background-color: #191C17;
+    min-height: 76px;
+    padding: 16px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    /* De hoge z-index zorgt dat het menu boven andere inhoud staat. */
+    position: relative;
+    z-index: 100;
+    border-bottom: 1px solid #30362B;
+}
+
+/* Het logo valt op door de grotere letters. */
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Het woord HUB krijgt de limegroene accentkleur. */
+.logo span {
+    color: #B7F34A;
+}
+
+/* De lijst wordt horizontaal weergegeven zonder opsommingstekens. */
+.navigatie ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Elk hoofdmenu-item is een mogelijke plek voor een submenu. */
+.navigatie li {
+    position: relative;
+}
+
+/* De links krijgen ruimte zodat ze makkelijk aanklikbaar zijn. */
+.navigatie > ul > li > a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 6px;
+    color: #D6D9D1;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Bij aanwijzen verandert de kleur van de link. */
+.navigatie a:hover,
+.navigatie a:focus-visible {
+    background-color: #2A3023;
+    color: #B7F34A;
+}
+
+/* De actieve link laat zien op welke pagina je bent. */
+.navigatie a.actief {
+    color: #B7F34A;
+    box-shadow: inset 0 -2px 0 #B7F34A;
+}
+
+/* =========================================
+   DROPDOWNMENU
+   ========================================= */
+
+/* Het submenu staat standaard verborgen. */
+.dropdown-menu {
+    display: none !important;
+    position: absolute;
+    top: 100%; /* Het menu begint direct onder de hoofdknop. */
+    left: 0;
+    min-width: 230px;
+    background-color: #20241D;
+    border: 1px solid #3A4231;
+    border-radius: 8px;
+    padding: 8px !important;
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 2px !important;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Het submenu verschijnt als je de knop of lijst aanwijst. */
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {
+    display: flex !important;
+}
+
+/* De submenu-links vullen de breedte van het submenu. */
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    color: #F3F4EF;
+}
+
+/* =========================================
+   INTRODUCTIEBLOK
+   ========================================= */
+
+/* Dit is het grote introductieblok bovenaan de homepage. */
+.intro {
+    padding: 90px 8%;
+    background: linear-gradient(135deg, #20271B, #10120F 75%);
+    border-bottom: 1px solid #30362B;
+}
+
+/* Kleine groene labels geven onderdelen een herkenbare stijl. */
+.klein-label {
+    color: #B7F34A;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* De hoofdtekst krijgt een groot lettertype. */
+.intro h1 {
+    max-width: 850px;
+    margin: 16px 0;
+    font-size: clamp(38px, 7vw, 72px);
+    line-height: 1.1;
+}
+
+/* Het woord Gymhub krijgt de accentkleur. */
+.intro h1 span {
+    color: #B7F34A;
+}
+
+/* De introductietekst krijgt een beperkte breedte voor leesbaarheid. */
+.intro-tekst {
+    max-width: 600px;
+    color: #C5C9BF;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   KNOPPEN
+   ========================================= */
+
+/* De knop valt op door de groene achtergrond. */
+.knop {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #B7F34A;
+    color: #151811;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* De knop verandert als je hem aanwijst. */
+.knop:hover,
+.knop:focus-visible {
+    background-color: #D0FF79;
+}
+
+/* =========================================
+   INHOUD EN KAARTEN
+   ========================================= */
+
+/* Dit zijn de verschillende inhoudsblokken op de homepage. */
+.inhoudsblok {
+    padding: 55px 8%;
+}
+
+/* Koppen zijn helder en goed leesbaar. */
+.inhoudsblok h2 {
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+/* Gewone alinea's krijgen een zachte witte tekstkleur. */
+.inhoudsblok p {
+    color: #C5C9BF;
+}
+
+/* De kaarten worden automatisch over beschikbare ruimte verdeeld. */
+.kaarten {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+}
+
+/* Elke kaart heeft een eigen achtergrond en rand. */
+.kaart {
+    background-color: #191C17;
+    border: 1px solid #30362B;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+/* De titel van iedere kaart is wit. */
+.kaart h3 {
+    color: #F3F4EF;
+    margin-top: 0;
+}
+
+/* De links in de kaarten zijn groen en duidelijk herkenbaar. */
+.kaart a {
+    display: inline-block;
+    color: #B7F34A;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* =========================================
+   VOETTEKST
+   ========================================= */
+
+/* De footer sluit de website netjes af. */
+.voettekst {
+    padding: 22px 8%;
+    background-color: #191C17;
+    border-top: 1px solid #30362B;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* =========================================
+   AANPASSINGEN VOOR TELEFOONS
+   ========================================= */
+
+/* Deze regels gelden bij schermen van maximaal 600 pixels breed. */
+@media (max-width: 600px) {
+    .bovenbalk {
+        padding: 16px 5%;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* Het hoofdmenu mag op kleine schermen naar een nieuwe regel. */
+    .navigatie,
+    .navigatie > ul {
+        width: 100%;
+    }
+
+    .navigatie > ul {
+        flex-wrap: wrap;
+    }
+
+    .navigatie > ul > li > a {
+        padding: 9px 10px;
+    }
+
+    /* De dropdown blijft binnen het scherm beter bruikbaar. */
+    .dropdown-menu {
+        max-width: 90vw;
+    }
+
+    .intro {
+        padding: 60px 6%;
+    }
+
+    .inhoudsblok {
+        padding: 40px 6%;
+    }
+
+    /* Op een telefoon komen de kaarten onder elkaar. */
+    .kaarten {
+        grid-template-columns: 1fr;
+    }
+}
+```
