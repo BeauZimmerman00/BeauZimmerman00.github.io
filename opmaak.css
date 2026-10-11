@@ -393,3 +393,18 @@ a {
         grid-template-columns: 1fr;
     }
 }
+
+/* Opmaak van de klikbare videominiatuur op de compressiepagina. */
+.video-miniatuur {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid #B7F34A;
+}
+
+/* Maak de miniatuur iets doorzichtiger als je eroverheen gaat. */
+.video-miniatuur:hover {
+    opacity: 0.85;
+}
