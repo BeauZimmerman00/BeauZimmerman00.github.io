@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- Deze pagina legt RGB-kleuren en hex-kleurcodes uit. -->
+
+<html lang="nl">
+<head>
+    <!-- Zorgt ervoor dat Nederlandse tekens goed worden weergegeven. -->
+    <meta charset="UTF-8">
+
+    <!-- Zorgt ervoor dat de pagina goed werkt op telefoons. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- De titel van deze pagina in het browsertabblad. -->
+    <title>Gymhub | Kleurmodellen</title>
+
+    <!-- Gebruikt dezelfde opmaak als de rest van de website. -->
+    <link rel="stylesheet" href="opmaak.css">
+</head>
+
+<body>
+
+    <!-- De header bevat het logo en de navigatie. -->
+    <header class="bovenbalk">
+        <a class="logo" href="index.html">GYM<span>HUB</span></a>
+
+        <!-- Het navigatiemenu staat op iedere pagina. -->
+        <nav class="navigatie">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-knop actief">Informatica ▾</a>
+
+                    <!-- Dit submenu bevat de informaticaonderwerpen. -->
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="invoer-verwerking-uitvoer.html">
+                                Invoer, verwerking en uitvoer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="binairstelsel.html">Binair stelsel</a>
+                        </li>
+                        <li>
+                            <a class="actief" href="kleurmodellen.html">
+                                Kleurmodellen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="compressie.html">Compressie</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="ai.html">AI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hier begint de inhoud van de pagina. -->
+    <main>
+
+        <!-- Introductie van kleurmodellen. -->
+        <section class="intro">
+            <p class="klein-label">INFORMATICA · KLEUR</p>
+
+            <h1>Kleurmodellen<span>.</span></h1>
+
+            <p class="intro-tekst">
+                Kleuren op een beeldscherm worden met getallen
+                weergegeven. Hier leer je hoe RGB en hex werken.
+            </p>
+        </section>
+
+        <!-- Uitleg over het RGB-kleurmodel. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">MODEL 1</p>
+
+            <h2>Wat is RGB?</h2>
+
+            <p>
+                RGB staat voor rood, groen en blauw. Een beeldscherm
+                mengt deze drie kleuren om veel verschillende kleuren
+                te maken. Elke kleur krijgt een waarde van 0 tot en
+                met 255.
+            </p>
+
+            <p>
+                De eerste waarde geeft rood aan, de tweede groen en
+                de derde blauw. Door deze waarden te veranderen,
+                ontstaat een andere kleur.
+            </p>
+        </section>
+
+        <!-- Voorbeelden van RGB-kleuren. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">VOORBEELDEN</p>
+
+            <h2>Kleuren met RGB-getallen</h2>
+
+            <p>
+                Hieronder zie je drie voorbeelden. De getallen geven
+                aan hoeveel rood, groen en blauw worden gebruikt.
+            </p>
+
+            <div class="kleurkaarten">
+                <div class="kleurkaart">
+                    <div class="kleurvlak" style="background-color: rgb(255, 0, 0);"></div>
+                    <h3>Rood</h3>
+                    <p>rgb(255, 0, 0)</p>
+                </div>
+
+                <div class="kleurkaart">
+                    <div class="kleurvlak" style="background-color: rgb(0, 255, 0);"></div>
+                    <h3>Groen</h3>
+                    <p>rgb(0, 255, 0)</p>
+                </div>
+
+                <div class="kleurkaart">
+                    <div class="kleurvlak" style="background-color: rgb(0, 0, 255);"></div>
+                    <h3>Blauw</h3>
+                    <p>rgb(0, 0, 255)</p>
+                </div>
+            </div>
+
+            <p>
+                Bij rgb(0, 0, 0) staan alle drie de kleuren uit:
+                dat is zwart. Bij rgb(255, 255, 255) staan alle
+                drie op de hoogste waarde: dat is wit.
+            </p>
+        </section>
+
+        <!-- Uitleg over hexadecimale kleurcodes. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">MODEL 2</p>
+
+            <h2>Wat is een hex-kleurcode?</h2>
+
+            <p>
+                Een hex-kleurcode schrijft dezelfde kleur op een
+                andere manier op. De code begint met een hekje,
+                gevolgd door zes tekens. De eerste twee tekens staan
+                voor rood, de volgende twee voor groen en de laatste
+                twee voor blauw.
+            </p>
+
+            <p>
+                Bijvoorbeeld: #F2C744 is een goudgele kleur.
+                De letters en cijfers vormen samen de waarden
+                voor rood, groen en blauw in het hexadecimale stelsel.
+            </p>
+
+            <!-- Laat een voorbeeldkleur en de bijbehorende code zien. -->
+            <div class="hex-voorbeeld">
+                <div class="hex-kleurvlak"></div>
+
+                <div>
+                    <h3>Gymhub-goudgeel</h3>
+                    <p>RGB: rgb(242, 199, 68)</p>
+                    <p>Hex: #F2C744</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vergelijking van RGB en hex. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">VERGELIJKING</p>
+
+            <h2>RGB of hex?</h2>
+
+            <p>
+                RGB gebruikt drie gewone getallen tussen 0 en 255.
+                Hex gebruikt zes tekens na het hekje. Beide manieren
+                kunnen dezelfde kleur beschrijven. In CSS kun je
+                bijvoorbeeld zowel rgb(242, 199, 68) als #F2C744 gebruiken.
+            </p>
+        </section>
+
+        <!-- Ruimte voor de gekozen uitlegvideo. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">BEKIJK EN LEER</p>
+
+            <h2>Video over kleurmodellen</h2>
+
+            <p>
+                Kies zelf een korte YouTube-video over RGB of
+                hex-kleurcodes. Bekijk de video en schrijf daarna
+                in je eigen woorden waarom je deze video hebt gekozen
+                en wat je ervan hebt geleerd.
+            </p>
+
+            <!-- Voeg hier de iframe-code toe nadat je een video hebt gekozen. -->
+        </section>
+
+    </main>
+
+    <!-- De footer sluit de pagina af. -->
+    <footer class="voettekst">
+        <p>Gymhub · Mijn website voor informatica</p>
+    </footer>
+
+</body>
+</html>
