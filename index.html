@@ -1,13 +1,141 @@
+**Bestand: `index.html`**
 
-<!DOCTYPE html> <!--dit is de homepage van mijn site-->
-<html> <!--dit is het html-element-->
-    <head>
-        <title> Het eerste begin</title>
-        <meta charset-"utf-8">
-    </head>
-    <body>
-        Hier komt mijn eerste tekst
-        <a href="binairstelsel.html">Uitleg over het binaire stelsel</a>
+```html
+<!DOCTYPE html>
+<!-- Dit is de homepage van mijn Gymhub-website. -->
 
-    </body>
+<html lang="nl">
+<head>
+    <!-- Hiermee worden Nederlandse tekens goed weergegeven. -->
+    <meta charset="UTF-8">
+
+    <!-- Hiermee schaalt de website goed op een telefoon. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Dit is de titel die in het browsertabblad staat. -->
+    <title>Gymhub | Home</title>
+
+    <!-- Hiermee koppel ik mijn CSS-bestand aan deze pagina. -->
+    <link rel="stylesheet" type="text/css" href="opmaak.css">
+</head>
+
+<body>
+
+    <!-- De header bevat de naam van mijn website en het menu. -->
+    <header class="bovenbalk">
+        <a class="logo" href="index.html">GYM<span>HUB</span></a>
+
+        <!-- Het navigatiemenu helpt bezoekers door de website te gaan. -->
+        <nav class="navigatie">
+            <ul>
+                <li><a class="actief" href="index.html">Home</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-knop">Informatica ▾</a>
+
+                    <!-- Dit submenu klapt open als je er met de muis overheen gaat. -->
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="invoer-verwerking-uitvoer.html">
+                                Invoer, verwerking en uitvoer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="binairstelsel.html">Binair stelsel</a>
+                        </li>
+                        <li>
+                            <a href="kleurmodellen.html">Kleurmodellen</a>
+                        </li>
+                        <li>
+                            <a href="compressie.html">Compressie</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="ai.html">AI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- De main bevat de belangrijkste inhoud van de homepage. -->
+    <main>
+        <!-- Dit is het grote introductieblok bovenaan de pagina. -->
+        <section class="intro">
+            <p class="klein-label">MIJN WERELD · MIJN DOELEN</p>
+
+            <h1>Welkom bij <span>Gymhub.</span></h1>
+
+            <p class="intro-tekst">
+                Welkom op mijn website! Hier vertel ik over mezelf,
+                mijn interesses en verschillende onderwerpen uit de
+                wereld van informatica.
+            </p>
+
+            <!-- Deze knop brengt de bezoeker naar de informatie over mij. -->
+            <a class="knop" href="#over-mij">Ontdek mijn verhaal ↓</a>
+        </section>
+
+        <!-- Dit blok is bedoeld voor persoonlijke informatie over mij. -->
+        <section class="inhoudsblok" id="over-mij">
+            <p class="klein-label">EVEN VOORSTELLEN</p>
+
+            <h2>Wie ben ik?</h2>
+
+            <!-- Vervang deze aanwijzing door je eigen tekst. -->
+            <p>
+                [Schrijf hier in je eigen woorden iets over jezelf,
+                je hobby's en wat je leuk vindt om te doen.]
+            </p>
+        </section>
+
+        <!-- Deze kaarten geven bezoekers een overzicht van de website. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">ONTDEK DE WEBSITE</p>
+
+            <h2>Wat kun je hier leren?</h2>
+
+            <div class="kaarten">
+                <article class="kaart">
+                    <h3>01. Binair stelsel</h3>
+                    <p>
+                        Ontdek hoe computers met nullen en enen werken.
+                    </p>
+                    <a href="binairstelsel.html">Bekijk de pagina →</a>
+                </article>
+
+                <article class="kaart">
+                    <h3>02. Kleurmodellen</h3>
+                    <p>
+                        Leer hoe kleuren met RGB en hexadecimale codes
+                        worden weergegeven.
+                    </p>
+                    <a href="kleurmodellen.html">Bekijk de pagina →</a>
+                </article>
+
+                <article class="kaart">
+                    <h3>03. Compressie</h3>
+                    <p>
+                        Ontdek hoe bestanden kleiner kunnen worden gemaakt.
+                    </p>
+                    <a href="compressie.html">Bekijk de pagina →</a>
+                </article>
+
+                <article class="kaart">
+                    <h3>04. Kunstmatige intelligentie</h3>
+                    <p>
+                        Lees over AI en hoe deze technologie wordt gebruikt.
+                    </p>
+                    <a href="ai.html">Bekijk de pagina →</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- De footer staat onderaan de pagina. -->
+    <footer class="voettekst">
+        <p>Gymhub · Mijn website voor informatica</p>
+    </footer>
+
+</body>
 </html>
+```
