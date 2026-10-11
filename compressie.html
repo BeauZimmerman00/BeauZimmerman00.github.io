@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!-- Deze pagina legt bitmap, vector en compressie uit. -->
+
+<html lang="nl">
+<head>
+    <!-- Zorgt ervoor dat Nederlandse tekens goed worden weergegeven. -->
+    <meta charset="UTF-8">
+
+    <!-- Zorgt ervoor dat de pagina goed werkt op telefoons. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- De titel die in het browsertabblad verschijnt. -->
+    <title>Gymhub | Compressie</title>
+
+    <!-- Gebruikt dezelfde opmaak als de rest van de website. -->
+    <link rel="stylesheet" href="opmaak.css">
+</head>
+
+<body>
+
+    <!-- De bovenbalk bevat het logo en het navigatiemenu. -->
+    <header class="bovenbalk">
+        <a class="logo" href="index.html">GYM<span>HUB</span></a>
+
+        <!-- Hetzelfde navigatiemenu staat op iedere pagina. -->
+        <nav class="navigatie">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-knop actief">Informatica ▾</a>
+
+                    <!-- Dit submenu bevat de informaticaonderwerpen. -->
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="invoer-verwerking-uitvoer.html">
+                                Invoer, verwerking en uitvoer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="binairstelsel.html">Binair stelsel</a>
+                        </li>
+                        <li>
+                            <a href="kleurmodellen.html">Kleurmodellen</a>
+                        </li>
+                        <li>
+                            <a class="actief" href="compressie.html">Compressie</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="ai.html">AI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hier begint de inhoud van de pagina. -->
+    <main>
+
+        <!-- Introductie van het onderwerp compressie. -->
+        <section class="intro">
+            <p class="klein-label">INFORMATICA · BESTANDEN</p>
+
+            <h1>Compressie<span>.</span></h1>
+
+            <p class="intro-tekst">
+                Foto's, video's en andere bestanden kunnen veel
+                opslagruimte innemen. Met compressie kun je bestanden
+                kleiner maken.
+            </p>
+        </section>
+
+        <!-- Uitleg over compressie. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">DE BASIS</p>
+
+            <h2>Wat is compressie?</h2>
+
+            <p>
+                Compressie is het kleiner maken van een digitaal bestand.
+                Daardoor neemt het minder opslagruimte in en kan het
+                soms sneller via internet worden verstuurd.
+            </p>
+
+            <p>
+                Compressie kan met of zonder kwaliteitsverlies gebeuren.
+                Bij compressie zonder kwaliteitsverlies kan het originele
+                bestand volledig worden teruggehaald. Bij compressie met
+                kwaliteitsverlies wordt een deel van de informatie
+                verwijderd om het bestand kleiner te maken.
+            </p>
+        </section>
+
+        <!-- Uitleg over bitmapafbeeldingen. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">TYPE 1</p>
+
+            <h2>Bitmapafbeeldingen</h2>
+
+            <p>
+                Een bitmapafbeelding bestaat uit kleine puntjes die pixels
+                heten. Iedere pixel heeft een eigen kleur. Foto's zijn
+                meestal bitmapafbeeldingen.
+            </p>
+
+            <p>
+                Als je een bitmap heel ver vergroot, kun je de losse
+                pixels zien. Een afbeelding met veel pixels kan meer
+                opslagruimte innemen.
+            </p>
+
+            <!-- Dit SVG-voorbeeld laat pixels zien in een eenvoudig patroon. -->
+            <div class="compressie-voorbeeld">
+                <svg viewBox="0 0 300 180" role="img"
+                     aria-label="Voorbeeld van een bitmap met gekleurde pixels">
+                    <rect x="0" y="0" width="300" height="180" fill="#20241D"/>
+                    <rect x="45" y="25" width="35" height="35" fill="#B7F34A"/>
+                    <rect x="80" y="25" width="35" height="35" fill="#B7F34A"/>
+                    <rect x="115" y="25" width="35" height="35" fill="#B7F34A"/>
+                    <rect x="150" y="25" width="35" height="35" fill="#B7F34A"/>
+                    <rect x="80" y="60" width="35" height="35" fill="#B7F34A"/>
+                    <rect x="115" y="60" width="35" height="35" fill="#B7F34A"/>
+                    <rect x="150" y="60" width="35" height="35" fill="#B7F34A"/>
+                    <rect x="115" y="95" width="35" height="35" fill="#B7F34A"/>
+                    <rect x="150" y="95" width="35" height="35" fill="#B7F34A"/>
+                    <rect x="185" y="95" width="35" height="35" fill="#B7F34A"/>
+                    <rect x="80" y="130" width="35" height="20" fill="#B7F34A"/>
+                    <rect x="150" y="130" width="35" height="20" fill="#B7F34A"/>
+                </svg>
+
+                <p class="compressie-bijschrift">
+                    Een eenvoudige afbeelding opgebouwd uit losse kleurvlakken.
+                </p>
+            </div>
+        </section>
+
+        <!-- Uitleg over vectorafbeeldingen. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">TYPE 2</p>
+
+            <h2>Vectorafbeeldingen</h2>
+
+            <p>
+                Een vectorafbeelding bestaat uit lijnen, vormen en
+                berekeningen. De computer gebruikt deze informatie om
+                de afbeelding te tekenen.
+            </p>
+
+            <p>
+                Je kunt een vectorafbeelding groter of kleiner maken
+                zonder dat de randen blokkerig worden. Logo's en
+                eenvoudige pictogrammen worden vaak als vector gemaakt.
+            </p>
+
+            <!-- Dit SVG-voorbeeld laat zien hoe een vectorvorm eruit kan zien. -->
+            <div class="compressie-voorbeeld">
+                <svg viewBox="0 0 300 180" role="img"
+                     aria-label="Voorbeeld van een vectorafbeelding met cirkels en vormen">
+                    <rect x="0" y="0" width="300" height="180" rx="12" fill="#20241D"/>
+                    <circle cx="150" cy="85" r="55" fill="#B7F34A"/>
+                    <circle cx="150" cy="85" r="32" fill="#20241D"/>
+                    <path d="M130 85 L145 100 L175 65"
+                          fill="none" stroke="#F3F4EF"
+                          stroke-width="9" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+
+                <p class="compressie-bijschrift">
+                    Een vectorvorm wordt opgebouwd uit geometrische vormen en lijnen.
+                </p>
+            </div>
+        </section>
+
+        <!-- Vergelijking tussen bitmap en vector. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">VERGELIJKING</p>
+
+            <h2>Bitmap of vector?</h2>
+
+            <div class="compressie-tabel">
+                <div class="compressie-kaart">
+                    <h3>Bitmap</h3>
+                    <p>Bestaat uit pixels.</p>
+                    <p>Geschikt voor foto's.</p>
+                    <p>Bij sterk vergroten kunnen pixels zichtbaar worden.</p>
+                </div>
+
+                <div class="compressie-kaart">
+                    <h3>Vector</h3>
+                    <p>Bestaat uit vormen en lijnen.</p>
+                    <p>Geschikt voor logo's en pictogrammen.</p>
+                    <p>Kan worden vergroot zonder blokkerige randen.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uitleg over compressie in bestanden. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">IN DE PRAKTIJK</p>
+
+            <h2>Compressie van foto's en video's</h2>
+
+            <p>
+                Foto's en video's kunnen groot zijn omdat ze veel
+                beeldinformatie bevatten. Compressie helpt om de
+                bestandsgrootte te verkleinen. Bij foto's en video's
+                wordt vaak compressie met kwaliteitsverlies gebruikt,
+                maar er bestaan ook formaten en methodes zonder
+                kwaliteitsverlies.
+            </p>
+
+            <p>
+                Het effect hangt af van het bestand en de gebruikte
+                compressiemethode. Een kleiner bestand kan minder
+                details bevatten, maar dat hoeft niet altijd zichtbaar
+                te zijn.
+            </p>
+        </section>
+
+        <!-- Ruimte voor de zelfgekozen YouTube-video. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">BEKIJK EN LEER</p>
+
+            <h2>Video over compressie</h2>
+
+            <p>
+                Kies zelf een korte YouTube-video over het comprimeren
+                van bestanden, foto's of video's. Bekijk de video en
+                schrijf daarna in je eigen woorden waarom je deze
+                video hebt gekozen en wat je ervan hebt geleerd.
+            </p>
+
+            <!-- De gekozen video komt als klikbare afbeelding hieronder. -->
+            <!-- Vervang de voorbeeldtekst zodra je een video hebt gekozen. -->
+            <p>
+                De klikbare videominiatuur wordt hier toegevoegd zodra
+                je de YouTube-link hebt gekozen.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- De footer sluit de pagina af. -->
+    <footer class="voettekst">
+        <p>Gymhub · Mijn website voor informatica</p>
+    </footer>
+
+</body>
+</html>
