@@ -1,14 +1,231 @@
+**Bestand: `binairstelsel.html`**
 
-<!DOCTYPE html> <!--dit is de homepage van mijn site-->
-<html> <!--dit is het html-element-->
-    <head>
-        <title> Binair stelsel</title>
-        <meta charset-"utf-8">
-    </head>
-    <body>
-        Hier komt mijn tekst
-        <a href="index.html">Homepage</a>
-<img src="MooiUitzicht1.avif" alt="MooiUitzicht1">
+```html
+<!DOCTYPE html>
+<!-- Deze pagina legt het binaire stelsel uit. -->
 
-    </body>
+<html lang="nl">
+<head>
+    <!-- Zorgt ervoor dat Nederlandse tekens goed worden weergegeven. -->
+    <meta charset="UTF-8">
+
+    <!-- Zorgt ervoor dat de pagina goed schaalt op telefoons. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- De titel die bovenaan het browsertabblad verschijnt. -->
+    <title>Gymhub | Binair stelsel</title>
+
+    <!-- Gebruikt dezelfde vormgeving als de homepage. -->
+    <link rel="stylesheet" type="text/css" href="opmaak.css">
+</head>
+
+<body>
+
+    <!-- De header bevat het logo en de navigatiebalk. -->
+    <header class="bovenbalk">
+        <a class="logo" href="index.html">GYM<span>HUB</span></a>
+
+        <!-- Dit menu staat ook op de homepage. -->
+        <nav class="navigatie">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-knop actief">Informatica ▾</a>
+
+                    <!-- Dit submenu bevat de informaticaonderwerpen. -->
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="invoer-verwerking-uitvoer.html">
+                                Invoer, verwerking en uitvoer
+                            </a>
+                        </li>
+                        <li>
+                            <a class="actief" href="binairstelsel.html">
+                                Binair stelsel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kleurmodellen.html">Kleurmodellen</a>
+                        </li>
+                        <li>
+                            <a href="compressie.html">Compressie</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="ai.html">AI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hier begint de belangrijkste inhoud van de pagina. -->
+    <main>
+
+        <!-- Introductie van het onderwerp. -->
+        <section class="intro">
+            <p class="klein-label">INFORMATICA · GETALLEN</p>
+
+            <h1>Het binaire <span>stelsel.</span></h1>
+
+            <p class="intro-tekst">
+                Computers verwerken informatie met behulp van nullen
+                en enen. Op deze pagina ontdek je hoe dat werkt.
+            </p>
+        </section>
+
+        <!-- Uitleg over de basis van het binaire stelsel. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">DE BASIS</p>
+
+            <h2>Wat is het binaire stelsel?</h2>
+
+            <p>
+                Het binaire stelsel is een talstelsel met maar twee
+                cijfers: 0 en 1. Ons gewone tientallige stelsel gebruikt
+                tien cijfers, van 0 tot en met 9. Computers gebruiken
+                binaire informatie om gegevens te verwerken en op te slaan.
+            </p>
+
+            <p>
+                Een enkele 0 of 1 heet een bit. Met meerdere bits kun je
+                verschillende getallen en andere soorten informatie
+                voorstellen.
+            </p>
+        </section>
+
+        <!-- Voorbeeld met een zelfgemaakt SVG-diagram. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">VOORBEELD</p>
+
+            <h2>Van binair naar decimaal</h2>
+
+            <p>
+                Het binaire getal 1101 is in het tientallige stelsel
+                gelijk aan 13. Elke positie heeft een waarde die een
+                macht van 2 is.
+            </p>
+
+            <!-- SVG is een manier om zelf een schaalbaar diagram te tekenen. -->
+            <svg
+                viewBox="0 0 600 220"
+                width="100%"
+                role="img"
+                aria-labelledby="binair-titel binair-beschrijving"
+            >
+                <title id="binair-titel">Het binaire getal 1101</title>
+                <desc id="binair-beschrijving">
+                    De bits 1, 1, 0 en 1 hebben de positiewaarden
+                    8, 4, 2 en 1. Samen leveren ze 13 op.
+                </desc>
+
+                <g font-family="Arial, sans-serif" text-anchor="middle">
+                    <g fill="#B7F34A">
+                        <rect x="35" y="25" width="110" height="65" rx="10"/>
+                        <rect x="180" y="25" width="110" height="65" rx="10"/>
+                        <rect x="325" y="25" width="110" height="65" rx="10"/>
+                        <rect x="470" y="25" width="95" height="65" rx="10"/>
+                    </g>
+
+                    <g fill="#151811" font-size="30" font-weight="bold">
+                        <text x="90" y="67">1</text>
+                        <text x="235" y="67">1</text>
+                        <text x="380" y="67">0</text>
+                        <text x="517" y="67">1</text>
+                    </g>
+
+                    <g fill="#F3F4EF" font-size="18">
+                        <text x="90" y="125">8</text>
+                        <text x="235" y="125">4</text>
+                        <text x="380" y="125">2</text>
+                        <text x="517" y="125">1</text>
+                    </g>
+
+                    <g fill="#C5C9BF" font-size="13">
+                        <text x="90" y="148">1 × 8</text>
+                        <text x="235" y="148">1 × 4</text>
+                        <text x="380" y="148">0 × 2</text>
+                        <text x="517" y="148">1 × 1</text>
+                    </g>
+
+                    <text x="300" y="190" fill="#B7F34A"
+                          font-size="23" font-weight="bold">
+                        8 + 4 + 0 + 1 = 13
+                    </text>
+                </g>
+            </svg>
+
+            <p>
+                Je telt de positiewaarden op waarvoor een 1 staat:
+                8 + 4 + 1 = 13. De positie met een 0 telt niet mee.
+            </p>
+        </section>
+
+        <!-- Het spel waarmee bezoekers zelf kunnen oefenen. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">ZELF PROBEREN</p>
+
+            <h2>Speel Binary Bonanza</h2>
+
+            <p>
+                Met dit spel kun je oefenen met binaire getallen.
+                Speel een aantal levels en ontdek hoe goed je de
+                nullen en enen begrijpt.
+            </p>
+
+            <!-- Het spel wordt in een iframe binnen deze pagina getoond. -->
+            <iframe
+                src="https://games.penjee.com/binary-bonanza/game.php"
+                title="Binary Bonanza: oefenen met binaire getallen"
+                width="100%"
+                height="500"
+                loading="lazy"
+                style="border: 0; border-radius: 10px;"
+                allowfullscreen>
+            </iframe>
+
+            <p>
+                Werkt het spel niet in dit venster? Open dan
+                <a href="https://games.penjee.com/binary-bonanza/game.php"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Binary Bonanza in een nieuw tabblad
+                </a>.
+            </p>
+
+            <!-- Noteer zelf hoeveel levels je hebt gespeeld en wat je leerde. -->
+            <p>
+                Mijn ervaring met het spel:
+                [Schrijf hier zelf op welke levels je hebt gespeeld
+                en wat je ervan hebt geleerd.]
+            </p>
+        </section>
+
+        <!-- Ruimte voor de YouTube-video die je zelf uitkiest en bekijkt. -->
+        <section class="inhoudsblok">
+            <p class="klein-label">BEKIJK EN LEER</p>
+
+            <h2>Video over het binaire stelsel</h2>
+
+            <p>
+                Zoek zelf een korte, begrijpelijke YouTube-video over
+                het binaire stelsel. Bekijk de video en schrijf daarna
+                in je eigen woorden waarom je deze video hebt gekozen
+                en wat je ervan hebt geleerd.
+            </p>
+
+            <!-- Voeg hier later de iframe-code toe met jouw gekozen video. -->
+        </section>
+
+    </main>
+
+    <!-- De footer sluit de pagina af. -->
+    <footer class="voettekst">
+        <p>Gymhub · Mijn website voor informatica</p>
+    </footer>
+
+</body>
 </html>
+```
